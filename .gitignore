@@ -1,0 +1,23 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Pytest
+.pytest_cache/
+
+# Jupyter / Databricks
+.ipynb_checkpoints/
+
+# Local configs & secrets
+.env
+conf/config.yaml
+
+# OS
+.DS_Store
+
+# Data (even synthetic)
+synthetic_transactions*.csv
+
+# IDE
+.vscode/
