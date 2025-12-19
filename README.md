@@ -21,11 +21,14 @@ The pipeline follows the Bronze / Silver / Gold architecture and was executed an
 
 ## Pipeline Architecture
 
-Raw Parquet Dataset  
-→ Bronze (Delta)  
-→ Silver (Cleaned & Anonymized)  
-→ Gold (Business Metrics)  
-→ SQL Analytics
+![Bronze Silver Gold Architecture](docs/images/architecture_diagram.png)
+
+The pipeline follows a layered **Bronze / Silver / Gold** architecture implemented in **Azure Databricks** using **Apache Spark** and **Delta Lake**.
+
+- **Bronze Layer**: Raw Parquet data ingestion with full schema preservation, stored as Delta tables.
+- **Silver Layer**: Data cleansing, standardization, PII removal (SSN), and data quality enforcement.
+- **Gold Layer**: Aggregated business metrics optimized for analytics and SQL consumption.
+- **SQL Analytics**: Analytical queries executed over Gold Delta tables for reporting and insights.
 
 ---
 
